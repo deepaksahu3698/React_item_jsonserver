@@ -1,40 +1,10 @@
 {
   "todo": [
     {
-      "item": "rice",
+      "item": "dal",
       "qunatity": "2kg",
       "status": false,
-      "id": 1
-    },
-    {
-      "item": "sugger",
-      "qunatity": "1kg",
-      "status": false,
       "id": 2
-    },
-    {
-      "item": "rice",
-      "qunatity": "3kg",
-      "status": false,
-      "id": 3
-    },
-    {
-      "item": "oil",
-      "qunatity": "1lit",
-      "status": false,
-      "id": 4
-    },
-    {
-      "item": "biskut",
-      "qunatity": "1pkt",
-      "status": false,
-      "id": 5
-    },
-    {
-      "item": "egg",
-      "qunatity": "6",
-      "status": false,
-      "id": 6
     }
   ]
 }

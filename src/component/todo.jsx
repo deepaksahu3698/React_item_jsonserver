@@ -25,8 +25,8 @@ const Todo=()=>{
         get_item()
     },[])
  
-    console.log(item)
-    
+  
+  
 const additem=()=>{
     const data_qun={
         item:Data_item,
@@ -35,6 +35,7 @@ const additem=()=>{
         
     }
    
+//    console.log(data_qun)
     fetch(`http://localhost:3001/todo`,{
         method:"POST",
         body:JSON.stringify(data_qun),
@@ -45,7 +46,7 @@ const additem=()=>{
     .then((res)=>res.json())
     .then((res)=>{get_item()})
     .catch((err)=>console.log("error"))
-
+    
 }
 // if(loading){
 //     return <h1>Loading.....</h1>
@@ -53,6 +54,13 @@ const additem=()=>{
 // if(error){
 //     return <h2>Some thing wrong.....</h2>
 // }
+
+const deletitem=(id)=>{
+   let res=fetch(`http://localhost:3001/todo/${id}`,{
+       method:"DELETE"
+   })
+   get_item(res)
+}
 return loading ?(<h1>Loading.....</h1>):error?(<h1>Some Error</h1>):(
 
 <>
@@ -76,8 +84,8 @@ return loading ?(<h1>Loading.....</h1>):error?(<h1>Some Error</h1>):(
         <br />
         <b>QUANTITY:-{e.qunatity}</b>
         <br />
-        <button >Not buy</button>
-        <button >Remove</button>
+       
+        <button onClick={()=>deletitem(e.id)}>Remove</button>
 
 
     </div>
